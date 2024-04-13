@@ -1,0 +1,63 @@
+<section class="propety-binding">
+  <article>
+    <h3>InterPolation / Interpolação</h3>
+    <p>String renderizada com Interpolação {{url}}</p>
+    <p>soma de valores direto Pelo Template: 1 + 1 = {{ 1+1 }}</p>
+    <p>Retorno de Função: {{ Valor() }}</p>
+    <p>{{ url2 || url }}</p>
+    <h3></h3>
+  </article>
+  <article>
+    <h3>Property binding</h3>
+    <img [src]="url3">
+    <img src="{{url3}}">
+  </article>
+  <article>
+    <h3>Class e Style Binding</h3>
+    <div>
+      Selecione uma classe:
+      <select #classe (change)="0">
+        <option value="alert-primary">Primary</option>
+        <option value="alert-success">Success</option>
+        <option value="alert-danger">Danger</option>
+        <option value="alert-warning">Warning</option>
+      </select>
+    </div>
+    <br>
+    <br>
+    <div class="tabela" role="alert">
+      <div class="alert" [class.alert-primary]="classe.value == 'alert-primary'" role="alert">
+        Primary
+      </div>
+      <div class="alert" [class.alert-success]="classe.value == 'alert-success'" role="alert">
+        Success
+      </div>
+      <div class="alert" [class.alert-danger]="classe.value == 'alert-danger'" role="alert">
+        Danger
+      </div>
+      <div class="alert" [class.alert-warning]="classe.value == 'alert-warning'" role="alert">
+        Warning
+      </div>
+      <br>
+      <br>
+      <div class="alert" [ngClass]="classe.value">
+        Texto Colorido com base na box
+      </div>
+      <div class="alert alert-danger" [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+        Teste com Style.Display
+      </div>
+      <div class="alert alert-danger" [ngStyle]="{ display : classe.value == 'alert-danger' ? 'block' : 'none' }">
+        Teste com NgStyle
+      </div>
+    </div>
+  </article>
+  <article>
+    <h3>Event biding</h3>
+    <div>
+      <button (click)="botaoEvento(mensagemDoEvento)" class="btn btn-primary">Me Clique!</button>
+      <p #mensagemDoEvento></p>
+      <br><br>
+      <input type="text" (keyup)="onKeyUp($event)">
+    </div>
+  </article>
+</section>

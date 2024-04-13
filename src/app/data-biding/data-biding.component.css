@@ -1,0 +1,14 @@
+.propety-binding {
+  text-align: center;
+}
+
+.alert{
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.tabela {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
