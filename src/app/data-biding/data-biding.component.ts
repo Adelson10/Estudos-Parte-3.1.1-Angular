@@ -13,6 +13,12 @@ export class DataBidingComponent {
   PalavraSalva:string = '';
   PerdeuFoco:string = '';
   isMouseOver: boolean = false;
+  ValueInput: string = 'abc';
+
+  pessoa: any = {
+    nome: 'Adelson',
+    idade: '22'
+  }
 
   Valor():string {
     return this.url3;
