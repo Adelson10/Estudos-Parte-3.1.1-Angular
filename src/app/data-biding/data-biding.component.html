@@ -57,7 +57,31 @@
       <button (click)="botaoEvento(mensagemDoEvento)" class="btn btn-primary">Me Clique!</button>
       <p #mensagemDoEvento></p>
       <br><br>
-      <input type="text" (keyup)="onKeyUp($event)">
+      <input type="text"
+      (keyup)="onKeyUp($event)"
+      (keyup.enter)="SalvarValor(campoInput.value)"
+      (blur)="PerderFoco($event)"
+      #campoInput>
+
+      <p>{{PalavraDigita}}</p>
+      <p>{{PalavraSalva}}</p>
+      <p>{{PerdeuFoco}}</p>
+
+      <span
+      (mouseover)="onMouseOverOut()"
+      (mouseout)="onMouseOverOut()"
+      [ngClass]="{'highlite': isMouseOver}">
+      Passe a Mão sobre mim.
+      </span>
+      <p>{{isMouseOver}}</p>
+      <br><br>
     </div>
+  </article>
+  <h1>Two-way data binding</h1>
+  <div>
+    <input type="text" >
+  </div>
+  <article>
+
   </article>
 </section>

@@ -8,7 +8,11 @@ import { Component } from '@angular/core';
 export class DataBidingComponent {
   url = 10;
   url2 = 12;
-  url3: string = '../../assets/imagem.jpg';
+  url3:string = '../../assets/imagem.jpg';
+  PalavraDigita:string = '';
+  PalavraSalva:string = '';
+  PerdeuFoco:string = '';
+  isMouseOver: boolean = false;
 
   Valor():string {
     return this.url3;
@@ -26,9 +30,21 @@ export class DataBidingComponent {
     mensagemDoEvento.textContent = 'TESTE';
   }
 
-  onKeyUp(event:KeyboardEvent) {
-    console.log(event);
+  onKeyUp(event: KeyboardEvent) {
+    this.PalavraDigita = (<HTMLInputElement>event.target)?.value;
 
   }
+
+  SalvarValor(event: any) {
+    this.PalavraSalva = event;
+  }
+  PerderFoco(event: Event) {
+    this.PerdeuFoco = 'Perdeu o foco';
+  }
+
+  onMouseOverOut() {
+    this.isMouseOver = !this.isMouseOver;
+  }
+
 
 }
