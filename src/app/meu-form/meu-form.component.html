@@ -1,0 +1,11 @@
+<div>
+  <input type="text" [(ngModel)]="ValueInput">
+  <p>{{ValueInput}}</p>
+</div>
+<br>
+<h3>Meu nome e {{pessoa.nome}} e tenho {{pessoa.idade}}</h3>
+<label for="NomeForm">Nome:</label>
+<input type="text" id="NomeForm" placeholder="Nome" [(ngModel)]="pessoa.nome">
+<label for="IdadeForm">Idade:</label>
+<input type="text" id="IdadeForm" placeholder="Idade" [(ngModel)]="pessoa.idade">
+<br><br>

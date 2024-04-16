@@ -77,12 +77,15 @@
       <br><br>
     </div>
   </article>
-  <h1>Two-way data binding</h1>
-  <div>
-    <input type="text" [(ngModel)]="ValueInput">
-    <p>{{ValueInput}}</p>
-  </div>
   <article>
-
+    <h1>Two-way data binding</h1>
+    <app-meu-form></app-meu-form>
   </article>
+
+  <section class="input-output-properties">
+    <article>
+        <h3>Input/Output Properties</h3>
+        <app-curso [NomeCurso]="NomeDoCurso"></app-curso>
+    </article>
+  </section>
 </section>
