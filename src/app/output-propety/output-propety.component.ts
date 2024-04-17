@@ -11,7 +11,7 @@ export class OutputPropetyComponent implements OnInit {
   //Emite um evento Customizado para a classe pai // SAIDA DOS DADOS DO FILHO PARA O PAI
   @Output() mudouValor = new EventEmitter();
   //Variavel do DOM
-  @ViewChild('campoInput') campoValorInput:any;
+  @ViewChild('campoInput') campoValorInput!:ElementRef;
 
   ngOnInit(): void {
     this.mudouValor.emit(this.valor);
