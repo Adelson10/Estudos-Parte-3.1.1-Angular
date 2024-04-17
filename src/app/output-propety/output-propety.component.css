@@ -1,0 +1,12 @@
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.input-text {
+  border-radius: 10px;
+  border: solid 1px rgb(194, 194, 194);
+  padding: .4rem;
+}

@@ -8,12 +8,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { MeuFormModule } from './meu-form/meu-form.module';
 import { InputPropetyComponent } from './input-propety/input-propety.component';
+import { OutputPropetyComponent } from './output-propety/output-propety.component';
+import { CicloComponent } from './ciclo/ciclo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataBidingComponent,
-    InputPropetyComponent
+    InputPropetyComponent,
+    OutputPropetyComponent,
+    CicloComponent
   ],
   imports: [
     BrowserModule,

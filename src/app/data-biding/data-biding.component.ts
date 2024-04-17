@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-data-biding',
   templateUrl: './data-biding.component.html',
   styleUrls: ['./data-biding.component.css']
 })
-export class DataBidingComponent {
+export class DataBidingComponent{
   url = 10;
   url2 = 12;
   url3:string = '../../assets/imagem.jpg';
@@ -14,6 +14,7 @@ export class DataBidingComponent {
   PerdeuFoco:string = '';
   isMouseOver: boolean = false;
   NomeDoCurso:string = 'Angular';
+  valor:string = '';
 
   Valor():string {
     return this.url3;
@@ -47,5 +48,8 @@ export class DataBidingComponent {
     this.isMouseOver = !this.isMouseOver;
   }
 
+  mudouValor(evento: any) {
+    this.valor = evento;
+  }
 
 }

@@ -87,5 +87,13 @@
         <h3>Input/Output Properties</h3>
         <app-curso [NomeCurso]="NomeDoCurso"></app-curso>
     </article>
+    <article>
+      <h3>Output properties</h3>
+      <app-output-propety
+      [valor]="10"
+      (mudouValor)="mudouValor($event)"
+      ></app-output-propety>
+      <p>{{valor}}</p>
+    </article>
   </section>
 </section>

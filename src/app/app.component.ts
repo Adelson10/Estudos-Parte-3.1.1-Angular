@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Est';
+  valor:number = 5;
+  deletarCiclo: boolean = false;
+
+  Aumentar(){
+    this.valor++;
+  }
+
+  destruir() {
+    this.deletarCiclo = true;
+  }
 }
