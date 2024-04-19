@@ -4,8 +4,7 @@ import { Component, Input } from '@angular/core';
   selector: 'app-curso',
   templateUrl: './input-propety.component.html',
   styleUrls: ['./input-propety.component.css'],
-  inputs: ['nome:NomeCurso']
 })
 export class InputPropetyComponent {
-    nome: string = '';
+   @Input() nome!:string;
 }

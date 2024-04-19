@@ -1,0 +1,63 @@
+<article>
+<h5>ngIf</h5>
+  <div *ngIf="cursos.length > 0 else SemNada">
+    <p>{{cursos[0]}}</p>
+  </div>
+  <div [hidden]="monstrarCurso">
+    <p>{{cursos[1]}}</p>
+  </div>
+  <button (click)="monstrarCurso=!monstrarCurso">Mostrar Mensagem</button>
+</article>
+
+<article>
+  <h5>ngSwitch</h5>
+  <p>Substituir varios if e else</p>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="aba==='home'"
+          (click)="aba='home'"
+          >Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="aba==='mapa'"
+          (click)="aba='mapa'">
+          Mapa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="aba==='lista'"
+          (click)="aba='lista'">
+          Lista</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container" [ngSwitch]="aba">
+    <p *ngSwitchCase="'mapa'">Modo Mapa Ativado</p>
+    <p *ngSwitchCase="'lista'">Modo Lista Ativado</p>
+    <p *ngSwitchDefault>Home</p>
+  </div>
+</article>
+
+<article>
+<h5>ngFor</h5>
+<table class="table table-style">
+  <thead>
+    <th scope="col">#</th>
+    <th scope="col">Nomes:</th>
+    <th scope="col">Idades:</th>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr *ngFor="let pessoa of pessoas; index as i">
+      <th scope="row">{{i}}</th>
+      <td>{{pessoa.nome}}</td>
+      <td>{{pessoa.idade}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #SemNada>
+  <p>Não existem cursos disponiveis para ser exibido.</p>
+</ng-template>
+</article>

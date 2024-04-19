@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-data-biding',
@@ -8,13 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class DataBidingComponent{
   url = 10;
   url2 = 12;
-  url3:string = '../../assets/imagem.jpg';
-  PalavraDigita:string = '';
-  PalavraSalva:string = '';
-  PerdeuFoco:string = '';
-  isMouseOver: boolean = false;
-  NomeDoCurso:string = 'Angular';
-  valor:string = '';
+  url3 = '../../assets/imagem.jpg';
+  PalavraDigita!:string;
+  PalavraSalva!:string;
+  PerdeuFoco!:string;
+  isMouseOver!:boolean;
+  NomeDoCurso = 'Angular';
+  valor!:string;
 
   Valor():string {
     return this.url3;
@@ -37,10 +37,10 @@ export class DataBidingComponent{
 
   }
 
-  SalvarValor(event: any) {
+  SalvarValor(event:string) {
     this.PalavraSalva = event;
   }
-  PerderFoco(event: Event) {
+  PerderFoco() {
     this.PerdeuFoco = 'Perdeu o foco';
   }
 
@@ -48,7 +48,7 @@ export class DataBidingComponent{
     this.isMouseOver = !this.isMouseOver;
   }
 
-  mudouValor(evento: any) {
+  mudouValor(evento:string) {
     this.valor = evento;
   }
 

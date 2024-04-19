@@ -7,7 +7,7 @@ import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild }
 })
 export class OutputPropetyComponent implements OnInit {
   //Recebe o valor da classe pai // ENTRADA DOS DADOS DO PAI PARA O FILHO
-  @Input() valor: number = 0;
+  @Input() valor!:number;
   //Emite um evento Customizado para a classe pai // SAIDA DOS DADOS DO FILHO PARA O PAI
   @Output() mudouValor = new EventEmitter();
   //Variavel do DOM
@@ -15,9 +15,6 @@ export class OutputPropetyComponent implements OnInit {
 
   ngOnInit(): void {
     this.mudouValor.emit(this.valor);
-  }
-
-  constructor(){
   }
 
   AumDim(arg: string) {

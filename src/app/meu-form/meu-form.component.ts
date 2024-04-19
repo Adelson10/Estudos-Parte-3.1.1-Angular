@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./meu-form.component.css']
 })
 export class MeuFormComponent {
-  ValueInput: string = 'abc';
+  ValueInput!: string;
 
-  pessoa: any = {
+  pessoa = {
     nome: 'Adelson',
     idade: '22'
   }

@@ -10,6 +10,7 @@ import { MeuFormModule } from './meu-form/meu-form.module';
 import { InputPropetyComponent } from './input-propety/input-propety.component';
 import { OutputPropetyComponent } from './output-propety/output-propety.component';
 import { CicloComponent } from './ciclo/ciclo.component';
+import { DiretivasComponent } from './diretivas/diretivas.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CicloComponent } from './ciclo/ciclo.component';
     DataBidingComponent,
     InputPropetyComponent,
     OutputPropetyComponent,
-    CicloComponent
+    CicloComponent,
+    DiretivasComponent
   ],
   imports: [
     BrowserModule,
