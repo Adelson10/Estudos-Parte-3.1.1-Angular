@@ -61,3 +61,12 @@
   <p>Não existem cursos disponiveis para ser exibido.</p>
 </ng-template>
 </article>
+
+<article>
+  <i class="bi" 
+  (click)="meuFavorito=!meuFavorito"
+  [ngClass]="{
+    'bi-star-fill': meuFavorito,
+    'bi-star': !meuFavorito
+  }"></i>
+</article>
