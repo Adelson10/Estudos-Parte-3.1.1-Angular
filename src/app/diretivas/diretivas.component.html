@@ -63,10 +63,35 @@
 </article>
 
 <article>
+  <h5>ngClass</h5>
   <i class="bi" 
   (click)="meuFavorito=!meuFavorito"
   [ngClass]="{
     'bi-star-fill': meuFavorito,
     'bi-star': !meuFavorito
-  }"></i>
+  }"></i> Click na estrela
 </article>
+
+<article>
+  <h5>ngStyle</h5>
+  <button
+  [style.backgroundColor]="ativo ? 'blue' : 'gray'"
+  [style.color]="ativo ? 'white' : 'black'"
+  [style.fontWeight]="ativo ? 'bold' : 'normal'"
+  [style.fontSize]="tamanhoFonte+'px'"
+  (click)="ativo=!ativo"
+  >Mudar Atributo 'Ativo'</button>
+  <br>
+  <input type="text" [(ngModel)]="tamanhoFonte">
+  <br>
+  <button
+  [ngStyle]="{ 
+    'backgroundColor': (ativo ? 'blue' : 'gray'),
+    'color': (ativo ? 'white' : 'black'),
+    'fontWeight': (ativo ? 'bold' : 'normal'),
+    'fontSize': (tamanhoFonte+'px')
+  }"
+  (click)="ativo=!ativo"
+  >Mudar Atributo 'Ativo'</button>
+  <br>
+  </article>

@@ -27,6 +27,8 @@ export class DiretivasComponent {
 
     cursos:string[] = ['Adelson','nome'];
     monstrarCurso!:boolean;
-    aba!:string;
+    aba?:string;
     meuFavorito!:boolean;
+    ativo?:boolean;
+    tamanhoFonte?:string;
 }
