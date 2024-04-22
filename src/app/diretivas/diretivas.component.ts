@@ -31,4 +31,9 @@ export class DiretivasComponent {
     meuFavorito!:boolean;
     ativo?:boolean;
     tamanhoFonte?:string;
+    Elves: any = {
+      personagem : {
+        nome: null
+      }
+    }
 }
