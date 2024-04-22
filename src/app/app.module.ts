@@ -11,6 +11,7 @@ import { InputPropetyComponent } from './input-propety/input-propety.component';
 import { OutputPropetyComponent } from './output-propety/output-propety.component';
 import { CicloComponent } from './ciclo/ciclo.component';
 import { DiretivasComponent } from './diretivas/diretivas.component';
+import { FundoAmareloDirective } from './diretivas/fundo-amarelo.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DiretivasComponent } from './diretivas/diretivas.component';
     InputPropetyComponent,
     OutputPropetyComponent,
     CicloComponent,
-    DiretivasComponent
+    DiretivasComponent,
+    FundoAmareloDirective
   ],
   imports: [
     BrowserModule,

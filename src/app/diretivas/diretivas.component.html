@@ -101,3 +101,13 @@
     <p>Usando quando o valor vem null (E como uma verificação se o valor vem nulo não ira dar erro)</p>
     <p>{{Elves.personagem?.nome}}</p>
   </article>
+
+  <article>
+    <h5>ngContent</h5>
+    <div class="card" style="width: auto;">
+      <div class="card-body">
+        <ng-content select=".Titulo"></ng-content>
+        <ng-content select=".Corpo"></ng-content>
+      </div>
+    </div>
+  </article>
