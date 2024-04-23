@@ -12,6 +12,8 @@ import { OutputPropetyComponent } from './output-propety/output-propety.componen
 import { CicloComponent } from './ciclo/ciclo.component';
 import { DiretivasComponent } from './diretivas/diretivas.component';
 import { FundoAmareloDirective } from './diretivas/fundo-amarelo.directive';
+import { HighlightMouseDirective } from './diretivas/highlight-mouse.directive';
+import { HighlightDirective } from './diretivas/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { FundoAmareloDirective } from './diretivas/fundo-amarelo.directive';
     OutputPropetyComponent,
     CicloComponent,
     DiretivasComponent,
-    FundoAmareloDirective
+    FundoAmareloDirective,
+    HighlightMouseDirective,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

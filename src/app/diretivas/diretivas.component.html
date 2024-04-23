@@ -64,7 +64,7 @@
 
 <article>
   <h5>ngClass</h5>
-  <i class="bi" 
+  <i class="bi"
   (click)="meuFavorito=!meuFavorito"
   [ngClass]="{
     'bi-star-fill': meuFavorito,
@@ -85,7 +85,7 @@
   <input type="text" [(ngModel)]="tamanhoFonte">
   <br>
   <button
-  [ngStyle]="{ 
+  [ngStyle]="{
     'backgroundColor': (ativo ? 'blue' : 'gray'),
     'color': (ativo ? 'white' : 'black'),
     'fontWeight': (ativo ? 'bold' : 'normal'),
@@ -99,7 +99,7 @@
   <article>
     <h5>Elves "?"</h5>
     <p>Usando quando o valor vem null (E como uma verificação se o valor vem nulo não ira dar erro)</p>
-    <p>{{Elves.personagem?.nome}}</p>
+    <p>{{Elves.personagem.nome}}</p>
   </article>
 
   <article>
@@ -110,4 +110,23 @@
         <ng-content select=".Corpo"></ng-content>
       </div>
     </div>
+  </article>
+
+  <article>
+    <h5>ElementRef e Renderer</h5>
+    <p appFundoAmarelo>Fundo Amarelo</p>
+  </article>
+
+  <article>
+    <h5>HostListener HostBinding</h5>
+    <p appHighlightMouse>
+      Fundo Amarelo
+    </p>
+  </article>
+
+  <article>
+    <h5>Diretivas: Input e Property Binding</h5>
+    <p appHighlight>
+      Fundo com cores customizadas
+    </p>
   </article>

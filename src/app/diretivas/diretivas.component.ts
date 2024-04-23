@@ -31,7 +31,7 @@ export class DiretivasComponent {
     meuFavorito!:boolean;
     ativo?:boolean;
     tamanhoFonte?:string;
-    Elves: any = {
+    Elves = {
       personagem : {
         nome: null
       }
