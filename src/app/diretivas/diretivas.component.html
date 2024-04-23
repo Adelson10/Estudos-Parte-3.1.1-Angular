@@ -130,3 +130,14 @@
       Fundo com cores customizadas
     </p>
   </article>
+
+  <article>
+    <h5>Criando uma diretiva de estrutura (ngElse)</h5>
+    <div *ngIf="monstrarCurso">
+      <p>Mostrar Curso</p>
+    </div>
+    <div *ngElse="monstrarCurso">
+      <p>Não Existe Curso Listados</p>
+    </div>
+    <button (click)="monstrarCurso=!monstrarCurso">Mostrar Mensagem</button>
+  </article>

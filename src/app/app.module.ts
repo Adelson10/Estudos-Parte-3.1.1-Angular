@@ -14,6 +14,8 @@ import { DiretivasComponent } from './diretivas/diretivas.component';
 import { FundoAmareloDirective } from './diretivas/fundo-amarelo.directive';
 import { HighlightMouseDirective } from './diretivas/highlight-mouse.directive';
 import { HighlightDirective } from './diretivas/highlight.directive';
+import { NgElseDirective } from './diretivas/ng-else.directive';
+import { ServicesComponent } from './services/services.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { HighlightDirective } from './diretivas/highlight.directive';
     DiretivasComponent,
     FundoAmareloDirective,
     HighlightMouseDirective,
-    HighlightDirective
+    HighlightDirective,
+    NgElseDirective,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
