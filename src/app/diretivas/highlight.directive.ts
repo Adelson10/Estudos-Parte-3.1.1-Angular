@@ -18,10 +18,10 @@ export class HighlightDirective implements OnInit{
   @HostBinding('style.backgroundColor') backgroundColor?: string;
 
   @Input()
-  defaultColor: string = 'white';
+  defaultColor?: string = 'white';
   @Input('appHighlight')
-  highlightColor: string = 'yellow';
-  
+  highlightColor?: string = 'yellow';
+
   ngOnInit(): void {
     this.backgroundColor = this.defaultColor;
   }
