@@ -7,8 +7,8 @@ export class ServicesService {
 
   private readonly cursos:string[] = ['Angular 18', 'Java', 'Hana', 'Sap'];
 
-  getCursos() {
+  getCursos(): string[] {
     return this.cursos;
   }
-  
+
 }
