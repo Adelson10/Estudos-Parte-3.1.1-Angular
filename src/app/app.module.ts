@@ -16,6 +16,7 @@ import { HighlightMouseDirective } from './diretivas/highlight-mouse.directive';
 import { HighlightDirective } from './diretivas/highlight.directive';
 import { NgElseDirective } from './diretivas/ng-else.directive';
 import { ServicesComponent } from './services/services.component';
+import { CriarCursoModule } from './criar-curso/criar-curso.module';
 
 @NgModule({
   declarations: [
@@ -29,16 +30,17 @@ import { ServicesComponent } from './services/services.component';
     HighlightMouseDirective,
     HighlightDirective,
     NgElseDirective,
-    ServicesComponent
+    ServicesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    MeuFormModule
+    MeuFormModule,
+    CriarCursoModule
   ],
-  providers: [],
+  //providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

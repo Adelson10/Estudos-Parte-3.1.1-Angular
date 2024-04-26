@@ -4,10 +4,9 @@ import { ServicesService } from './services.service';
 @Component({
   selector: 'app-services',
   templateUrl: './services.component.html',
-  styleUrls: ['./services.component.css']
+  styleUrls: ['./services.component.css'],
 })
 export class ServicesComponent implements OnInit {
-
   cursos: string[] = [];
 
   constructor(private cursoService: ServicesService) {
@@ -15,6 +14,9 @@ export class ServicesComponent implements OnInit {
 
   ngOnInit(): void {
     this.cursos = this.cursoService.getCursos();
+    ServicesService.criouNovoCurso.subscribe(
+      curso => this.cursos.push(curso)
+    );
   }
 
 }
